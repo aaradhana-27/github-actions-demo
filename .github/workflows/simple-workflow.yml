@@ -1,8 +1,18 @@
-name:  hello-world
-on:  push
+name: CI
+
+on:
+	push:
+		branches:	[main]
+		
 jobs:
-   hello-world-jobs:
-    runs-on:  windows-latest
-    steps:
-    - name: OA-GHA-step1
-      run: echo "Hello Aara"
+	build:
+		runs-on:	ubuntu-latest
+		
+		steps:
+		- name:	Run-one-liner-script
+			run:	echo Hello,World!
+			
+		- name:	Run-multi-line-script
+			run:	|
+				echo Aa other actions to world
+				echo test, you are good here. 
