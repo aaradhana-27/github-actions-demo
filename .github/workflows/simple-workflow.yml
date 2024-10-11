@@ -1,17 +1,12 @@
 name: CI
-
-on:	push
-		
-		
+on:
+	push:
+		branches:	[main]		
 jobs:
 	build:
-		runs-on:	ubuntu-latest
-		
+		runs-on:	ubuntu-latest		
 		steps:
-		- name:	Run-one-liner-script
-			run:	echo Hello,World!
-			
-		- name:	Run-multi-line-script
-			run:	|
-				echo Aa other actions to world
-				echo test, you are good here. 
+		-uses:	actions/checkout@v2		
+		-name:	Run-multi-line-script
+			run:	echo Aa other actions to world
+				
