@@ -1,13 +1,8 @@
-name:  CI
-on:  push:
-   branches: [ "main" ]
+name:  hello-world
+on:  push
 jobs:
-  runs-on:  ubuntu-latest
-  steps:
-    -  uses:  actions/checkout@v2
-    -  name:  Run a one line script
-      run: echo Hello Aara!
-
-    -  name:  Run a multi line script
-      run: echo Hello Aara!
-           echo Welcome to GHA upskilling
+   hello-world-jobs:
+    runs-on:  windows-latest
+    steps:
+    - name: OA-GHA-step1
+      run: echo "Hello Aara"
